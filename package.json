@@ -6,7 +6,6 @@
   "scripts": {
     "start:prod": "cd dist && node server.js",
     "start": "vercel dev",
-    "deploy": "vercel deploy --prod",
     "dev": "ts-node-dev --inspect=0.0.0.0:9229 --watch --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register ./src/server.ts",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist/ --copy-files --no-copy-ignored",
     "postbuild": "tsc -p tsconfig.build.json --emitDeclarationOnly",
@@ -42,6 +41,7 @@
     "@types/node": "^18.11.10",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
+    "@vercel/node": "^2.7.0",
     "babel-plugin-module-resolver": "4.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
