@@ -21,10 +21,12 @@
     "resolveJsonModule": true,
     "target": "es2021",
     "types": ["node"],
+    "moduleResolution": "node",
+    "declaration": true,
     "paths": {
       "@/*": ["*"]
     }
   },
   "exclude": ["node_modules", "dist", "tests"],
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "node_modules/app"]
 }

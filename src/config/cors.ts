@@ -1,6 +1,4 @@
-import cors from 'cors';
-
-export = cors({
-  // origin: ['127.0.0.1:5500'],
+export const corsOptions = {
+  origin: '*',
   methods: ['GET', 'POST']
-});
+};

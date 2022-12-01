@@ -1,8 +1,6 @@
-import app from '@/app';
 import { env, logger } from '@/config';
-import { date } from './helpers/date';
-
-import './config/module-alias';
+import app from '@/app';
+import { date } from './helpers';
 
 app.listen(env.port, () => {
   logger.info(`Novo Serviço iniciado - ${date}`);
