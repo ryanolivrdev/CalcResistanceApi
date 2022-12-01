@@ -1,19 +1,10 @@
-import express from 'express';
-import cors from './config/cors';
-import { apiRouter } from './routes/index';
+import app from '@/app';
+import { env, logger } from '@/config';
+import { date } from './helpers/date';
 
-const app = express();
+import './config/module-alias';
 
-const PORT = process.env.PORT || 5500
-
-app.listen(PORT, () => {
-    const date = new Date().toLocaleString("pt-BR", { timeZone: "America/Belem" })
-    console.log(`Novo Serviço iniciado - ${date}`)
-    console.log(`Disponivel em http://localhost:${PORT}`)
+app.listen(env.port, () => {
+  logger.info(`Novo Serviço iniciado - ${date}`);
+  logger.info(`Disponivel em http://localhost:${env.port}`);
 });
-
-app.use(cors);
-
-app.use(express.json());
-
-app.use('/GetResistor', apiRouter)
