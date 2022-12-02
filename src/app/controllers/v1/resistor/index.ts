@@ -1,6 +1,9 @@
 import { appRoutes } from '@/config';
-import getResistorColorController from './get-resistor-color-controller';
+import getColorByResistanceController from './get-color-by-resistance-controller';
+import getResistanceByColorController from './get-resistance-by-color-controller';
 
-const resistorRouters = appRoutes.post('/Color', getResistorColorController);
+const resistorRouters = appRoutes
+  .post('/getResistence', getResistanceByColorController)
+  .post('/getColor', getColorByResistanceController);
 
 export default resistorRouters;

@@ -1,3 +1,4 @@
-import { IResistor, IResistorColor } from './IResistor';
+import IResistor from './IResistor';
+import IResistence from './IResistence';
 
-export { IResistor, IResistorColor };
+export { IResistor, IResistence };
