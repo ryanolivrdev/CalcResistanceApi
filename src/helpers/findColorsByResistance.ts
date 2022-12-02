@@ -3,7 +3,6 @@ import { formatColorValue } from './formatColorValue';
 
 export function findColorsByResistence(resistence: string) {
   try {
-    if(resistence.charAt(0) !== "0"){
       const resistenceWithoutSpaces = resistence.replace(/\s/g, '');
       const value = [];
       let teste = resistenceWithoutSpaces.slice(2);
@@ -15,10 +14,7 @@ export function findColorsByResistence(resistence: string) {
       const formart = formatColorValue(value as Array<string>);
 
       return formart;
-    }
-    else{
-      return "Valor Invalido"
-    }
+    
   } catch (error) {
     return 'Ocorreu algum erro no servidor, tente novamente mais tarde';
   }

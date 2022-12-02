@@ -7,6 +7,8 @@ export default function getColorByResistanceController(req: RequestProps, res: R
 
   if (!resistence) return res.status(400).json({ erro: 'Envie o valor da resistencia' });
 
+  if(resistence.charAt(0) === "0") return res.status(400).json({ result: "Valor Inválido" });
+
   const result = findColorsByResistence(resistence);
 
   if (result) {
