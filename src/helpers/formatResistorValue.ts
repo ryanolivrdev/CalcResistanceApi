@@ -5,13 +5,13 @@ export function formatResistorValue(value: string) {
   if (Number.isNaN(number)) {
     formatedValue = '--';
   } else if (number >= 1000000000) {
-    formatedValue = `${number / 1000000000}G`;
+    formatedValue = `${number / 1000000000}G Ohms`;
   } else if (number >= 1000000) {
-    formatedValue = `${number / 1000000}M`;
+    formatedValue = `${number / 1000000}M Ohms`;
   } else if (number >= 1000) {
-    formatedValue = `${number / 1000}k`;
+    formatedValue = `${number / 1000}K Ohms`;
   } else {
-    formatedValue += ' ';
+    formatedValue += ' Ohms';
   }
 
   return formatedValue;
