@@ -7,6 +7,8 @@ export default function getResistanceByColorController(req: RequestProps, res: R
 
   if (!color1 || !color2 || !color3) return res.status(400).json({ erro: 'Envie todas cores' });
 
+  if(color1.toLowerCase() === "preto") return res.json({ result: "Valor Inválido" });
+
   const result = findResistanceByColor({ color1, color2, color3 });
 
   if (result) {
